@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="msapplication-task" content="name=购优惠;icon-uri=icon.png" />
+		<link rel="Shortcut Icon" href="/img/icon.png" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>购优惠-在线下载-每天千款优惠券秒杀</title>
+		<meta name="description" content="购优惠-每天千款优惠券秒杀，一折限时疯抢！-购优惠" />
+		<meta name="keywords" content="购优惠-每天千款优惠券秒杀，一折限时疯抢！-购优惠" />
+		<link rel="stylesheet" type="text/css" href="css/g.css">
+		<link rel="stylesheet" type="text/css" href="css/download.css">
+	</head>
+
+	<body class="appdownload-body">
+		<div class="mb-stars"></div>
+		<div class="page-bg-btm mobile"></div>
+
+		<div class="appdownload-wrap">
+			<div class="appdownload-logo">
+				<img src="img/icon.png" width="80" height="80">
+				<p class="appname">小智工具箱<br />简洁实用的工具箱~</p>
+			</div>
+			<!--提示：页面不存在-->
+			<!--提示：暂不支持的机型-->
+			<div class="appdownload-btns">
+			<a href="https://www.coolapk.com/apk/cn.coldsong.fusionapp">
+					<span class="ico ico-android"></span>
+					<span class="txt">免费下载</span>
+				</a>
+			</div>
+
+			<span class="appdownload-check-erwei">查看二维码</span>
+			<p class="appdownload-copyright">Copyright © 2018-2019  xiaozhibox All Rights Reserved</p>
+		</div>
+
+		<div class="appdownload-erwei-overlay" style="display: none;">
+			<div class="container">
+				<p>扫描二维码下载</p>
+				<img src="img/1451458631463625.png" width="112" height="112" alt="" />
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-1.8.0.min.js?time=20150409"></script>
+		<script type="text/javascript">
+			$(function() {
+				var checkErweiBtn = $(".appdownload-check-erwei"),
+					erweiOverlay = $(".appdownload-erwei-overlay"),
+					erweiOverlayContainer = erweiOverlay.find(".container");
+				checkErweiBtn.click(function() {
+					erweiOverlay.fadeIn();
+				});
+				erweiOverlay.click(function(evt) {
+					evt.stopPropagation();
+					if (!$(evt.target).hasClass("container") && !$(evt.target).parents().hasClass("container")) {
+						console.log($(evt.target));
+						$(this).fadeOut();
+					}
+				});
+			});
+		</script>
+		<script async="" src="js/analytics.js"></script>
+		<script src="js/part1.js"></script>
+		<script src="js/part2.js"></script>
+	</body>
+</html>
