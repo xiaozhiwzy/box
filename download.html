@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>小智工具箱 下载</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<style>
+			* {
+				font-family: '微软雅黑';
+				box-sizing: border-box;
+				outline: none;
+				margin: 0;
+				padding: 0;
+				border: 0;
+				text-decoration: none;
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+				color: #3c3c3c;
+			}
+
+			html,
+			body {
+				height: 100%;
+				margin: 0 auto;
+				max-width: 760px;
+			}
+
+			header {
+				position: fixed;
+				top: 0;
+				width: 100%;
+				max-width: 760px;
+				height: 56px;
+				z-index: 1
+			}
+
+			u {
+				color: #fff;
+				font-size: 18px;
+				position: fixed;
+				top: 64px;
+				margin-left: 116px;
+				z-index: 2;
+				display: block;
+				height: 55px;
+				line-height: 55px;
+			}
+
+			header img {
+				width: 56px;
+				height: 56px;
+				padding: 16px
+			}
+
+			header img:active {
+				background: rgba(255, 255, 255, 0.4);
+			}
+
+			main {
+				z-index: -1;
+				position: fixed;
+				top: 0;
+				padding-top: 56px;
+				height: 172px;
+				background: #d68189;
+				100%;
+				width: 100%;
+				max-width: 760px;
+			}
+
+			main img {
+				width: 68px;
+				height: 68px;
+				margin: 24px;
+				float: left
+			}
+
+			main b {
+				margin-top: 56px;
+				display: block;
+				color: #fff;
+				font-size: 12px
+			}
+
+			main p {
+				color: #fff;
+				font-size: 12px;
+				margin-top: 4px
+			}
+
+			ul {
+				padding-top: 172px
+			}
+
+			ul a {
+				margin-top: -28px;
+				margin-right: 24px;
+				background: #1e8ae8;
+				width: 56px;
+				height: 56px;
+				float: right;
+				box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
+				border-radius: 56px;
+			}
+
+			ul a img {
+				width: 56px;
+				height: 56px;
+				padding: 16px;
+			}
+
+			aside {
+				display: block;
+				background: #fff;
+				height: 100%;
+				border-left: solid 1px #e0e0e0;
+				border-right: solid 1px #e0e0e0
+			}
+
+			aside li {
+				list-style: none;
+				padding: 24px 16px;
+				color: #1e8ae8;
+				font-size: 14px;
+				background: #fff;
+				border-bottom: solid 1px #eee
+			}
+
+			aside li b {
+				color: #d0d0d0;
+				font-size: 10px;
+				margin-left: 8px
+			}
+
+			aside ol {
+				padding: 16px;
+				font-size: 14px;
+				color: #797979;
+				background: #edf7ee;
+				min-height: 100px
+			}
+
+			aside p {
+				padding: 16px;
+			}
+
+			aside p cite {
+				white-space: nowrap;
+				overflow-x: auto;
+				display: block;
+			}
+
+			aside p img {
+				height: 300px;
+				background: #eee;
+				margin-right: 4px;
+			}
+
+			aside div {
+				padding: 16px;
+				font-size: 14px;
+				color: #797979;
+				min-height: 196px
+			}
+		</style>
+	</head>
+	<body>
+
+		<header> </header>
+
+		<u>小智工具箱</u>
+		<main><img src="img/icon.png"><b>版本：V2.6.2　大小：1.92M</b>
+			<p>简洁实用的工具箱</p>
+		</main>
+		<ul><a href="http://sixdsw.cn"><img src="img/down.png"></a></ul>
+		<aside>
+			<li>更新日志</li>
+			<ol>
+				- 测试G<br />
+				- 测试<br />
+			</ol>
+			<p>
+				<cite>
+					<img src="img/1.jpg">
+					<img src="img/2.jpg">
+					<img src="img/3.jpg">
+					<img src="img/4.jpg">
+				</cite>
+			</p>
+			<li>应用介绍</li>
+			<div>
+				- 测试
+			</div>
+		</aside>
+	</body>
+	<script>
+		var header = document.getElementsByTagName("header")[0];
+		var mian = document.getElementsByTagName("main")[0];
+		var u = document.getElementsByTagName("u")[0];
+		var a = document.getElementsByTagName("a")[0];
+		window.onscroll = function() {
+			if (window.scrollY < 116) {
+				mian.style.top = "-" + window.scrollY / 2 + "px";
+				u.style.top = 65 - window.scrollY / 1.9 + "px";
+				u.style.marginLeft = 116 - window.scrollY / 2.4 + "px";
+				a.style.display = "";
+				header.style.background = "";
+				header.style.boxShadow = "none";
+			} else {
+				a.style.display = "none";
+				header.style.background = "#1e8ae8";
+				header.style.boxShadow = "0px 2px 8px rgba(0,0,0,0.2)";
+				if (u.style.top != "0px" || u.style.marginLeft != "20.0833px") {
+					u.style.top = "0px";
+					u.style.marginLeft = "20.0833px";
+				}
+			}
+		}
+	</script>
+</html>
